@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png">
+    <script src="app.js"></script>
     <title>Text encryptor</title>
 </head>
+
 <body>
-    <h1>Encriptador de texto</h1>             
-    <p>Esta pagina, permite encriptar y desencriptar un texto dado.</p>
-    <img src="/images/html-5.webp" alt="Logo HTML5">
+    <header class="header-container">
+        <h1>Encriptador de texto</h1>
+    </header>
+
+
+    <main class="main-container">
+        <div class="action-container">
+            <label class="label">Solo letras minusculas y sin acentos</label>
+            <textarea class="textarea-input" required
+                placeholder="Ingrese el texto a encriptar/desencriptar"></textarea>
+
+            <div class="button-container">
+                <button class="action-button" onclick="code()">Encriptar</button>
+                <button class="action-button" onclick="decode()">Desencriptar</button>
+                <button class="action-button" onclick="copy()">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-container">
+        <h3 class="footer-text">Desarrolado por Marcos Fagiano</h3>
+    </footer>
 </body>
+
 </html>
