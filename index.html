@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="es-ar">
+<html lang="es_AR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/images/favicon-16x16.png">
+    <title>Encriptador de texto</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
-    <title>Text encryptor</title>
 </head>
 
-<body>
-    <header class="header-container">
-        <h1>Encriptador de texto</h1>
-    </header>
-
-
-    <main class="main-container">
-        <div class="action-container">
-            <label class="label">Solo letras minusculas y sin acentos</label>
-            <textarea class="textarea-input" required
-                placeholder="Ingrese el texto a encriptar/desencriptar"></textarea>
-
-            <div class="button-container">
-                <button class="action-button" onclick="code()">Encriptar</button>
-                <button class="action-button" onclick="decode()">Desencriptar</button>
-                <button class="action-button" onclick="copy()">Copiar</button>
-            </div>
+<body class="main-container">
+    <div class="logo">
+        <img src="/images/Logo.png" alt="Logo de la pagina">
+    </div>
+    <div class="txt-in">
+        <textarea class="txt-area-in" placeholder="Ingrese el texto aqui"
+        required
+        ></textarea>
+        <h4 class="suggestion"> Solo letras minúsculas y sin acentos</h4>
+        <div class="btn-container">
+            <button class="btn-code" onclick="code()">Encriptar</button>
+            <button class="btn-decode" onclick="decode()">Desencriptar</button>
         </div>
-    </main>
-    <footer class="footer-container">
-        <h3 class="footer-text">Desarrolado por Marcos Fagiano</h3>
-    </footer>
+    </div>
+    <div class="txt-out">
+        <img class="txt-out-img" src="/images/monigote.png" alt="Imagen">
+        <textarea placeholder="Ningun texto fue encontrado." class="txt-area-out" readonly >
+
+        </textarea>
+        <button class="btn-cpy" onclick="copy()">
+            Copiar
+        </button>
+    </div>
+
 </body>
 
 </html>
