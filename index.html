@@ -11,27 +11,22 @@
 </head>
 
 <body class="main-container">
-    <div class="logo">
+    <div class="logo-container">
         <img src="./images/Logo.png" alt="Logo de la pagina">
     </div>
-    <div class="txt-in">
-        <textarea class="txt-area-in" placeholder="Ingrese el texto aqui"
-        required
-        ></textarea>
+    <div class="txt-container">
+        <textarea class="txt-area" placeholder="Ingrese el texto aqui" required></textarea>
         <h4 class="suggestion"> Solo letras minúsculas y sin acentos</h4>
         <div class="btn-container">
             <button class="btn-code" onclick="code()">Encriptar</button>
             <button class="btn-decode" onclick="decode()">Desencriptar</button>
+            <button class="btn-cpy" onclick="copy()">
+                Copiar
+            </button>
         </div>
     </div>
-    <div class="txt-out">
-        <img class="txt-out-img" src="./images/monigote.png" alt="Imagen">
-        <textarea placeholder="Ningun texto fue encontrado." class="txt-area-out" readonly >
-
-        </textarea>
-        <button class="btn-cpy" onclick="copy()">
-            Copiar
-        </button>
+    <div class="footer-container">
+        footer
     </div>
 
 </body>

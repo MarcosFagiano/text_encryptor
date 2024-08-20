@@ -26,7 +26,7 @@ function getKeyByValue(value) {
 }
 
 function code() {
-    let input = document.getElementsByClassName("txt-area-in")[0].value;
+    let input = document.getElementsByClassName("txt-area")[0].value;
     let encryptedText = '';
 
     for (let char of input) {
@@ -34,23 +34,23 @@ function code() {
         encryptedText += encryptedChar !== undefined ? encryptedChar : char;
     }
 
-    document.getElementsByClassName("txt-area-out")[0].value = encryptedText;
+    document.getElementsByClassName("txt-area")[0].value = encryptedText;
 }
 
 function decode() {
-    let input = document.getElementsByClassName("txt-area-in")[0].value;
+    let input = document.getElementsByClassName("txt-area")[0].value;
 
     let decryptedText = input;
     decryptMap.forEach((value, key) => {
         decryptedText = decryptedText.replaceAll(key, value);
     });
 
-    document.getElementsByClassName("txt-area-out")[0].value = decryptedText;
+    document.getElementsByClassName("txt-area")[0].value = decryptedText;
 }
 
 function copy() {
-    let output = document.getElementsByClassName("txt-area-out")[0].value;
-    
+    let output = document.getElementsByClassName("txt-area")[0].value;
+
     navigator.clipboard.writeText(output).then(() => {
         alert("Texto copiado al portapapeles!");
     }).catch(err => {

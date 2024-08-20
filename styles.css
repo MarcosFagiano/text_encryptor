@@ -1,88 +1,75 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
+.main-container {
+    display: flex;
+    background-color: #AAAAAA;
+    flex-direction: column;
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    background-color: #E5E5E5;
-    justify-content: center;
-    align-content: center;
-}
-
-.logo{
-    margin: 40px 0px 0px 40px;
-}
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-.txt-area-in{
-    background-color: #E5E5E5;
-    margin: -616px 0px 0px 0px;
-    height: 48px;
-    width: 680px;
-    
-}
-
-.btn-container{
-    display: flex;
-    gap: 24px;
-}
-
-.btn-code{
-    background-color: #0A3871;
-    color: #ffffff;
-}
-
-.btn-decode, .btn-cpy{
-    background-color: #D8DFE8;
-    color: #0A3871;
-}
-
-.txt-in{
-    height: 784px;
-    width: 680px;
-    margin: 168px 80px 72px 240px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     justify-content: center;
     align-items: center;
-
+    gap: 30px;
 }
 
-.txt-out{
-    margin: 40px 40px 40px 40px;
-    border-radius: 32px;
-    background-color: #ffffff ;
-    height: 944px;
-    width: 400px;
-    /* padding: ; */
+.logo-container {
+    flex-grow: 1;
 }
 
-.txt-out-img{
-    padding: 234px 32px 32px 32px;
-    height: 304px;
-    width: 336px;
+.txt-container {
+    flex-grow: 7;
 }
 
-.txt-area-in, .txt-area-out{
-    border: #ffffff;
-    resize: none;
+.footer-container {
+    flex-grow: 2;
 }
-.txt-in, .txt-out{
+
+.logo-container,
+.txt-container {
+    border: 3px #EEEEEE solid;
+    width: 100%;
+}
+
+.txt-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.btn-code, .btn-decode, .btn-cpy{
-    height: 67px;
-    width: 328px;
-    border-radius: 24px;
-    border: #0A3871 solid;
+.txt-area {
+    flex-grow: 8;
+    margin: 20px;
+    background: transparent;
+    width: 95%;
+    font-size: 30px;
+}
+
+.suggestion {
+    flex-grow: 1;
+    font-size: 28px;
+}
+
+.btn-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.btn-decode,
+.btn-code,
+.btn-cpy {
+    height: 70px;
+    width: 220px;
+    border-radius: 25px;
+    border: none;
+    font-size: 28px;
+    margin: 0 0 30px 0;
+}
+
+.btn-decode:hover,
+.btn-code:hover,
+.btn-cpy:hover {
+    cursor: pointer;
+    background: #CCCCCC;
+    font-size: 32px;
 }
