@@ -58,5 +58,17 @@ function copy() {
     });
 }
 
+document.addEventListener('input', function (event) {
+    if (event.target.tagName.toLowerCase() === 'textarea') {
+        autoResize(event.target);
+    }
+});
+
+function autoResize(textarea) {
+    textarea.style.height = 'auto'; // Restablecer la altura para recapturar el contenido
+    textarea.style.height = textarea.scrollHeight + 'px'; // Establecer la nueva altura basada en el contenido
+}
+
+
 encryptKey();
 decryptKey();

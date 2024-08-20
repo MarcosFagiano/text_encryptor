@@ -1,15 +1,31 @@
-.main-container {
-    display: flex;
-    background-color: #AAAAAA;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.main-container{
+    background-color: wheat;
 }
 
-.logo-container {
+img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 20px;
+    border: 3px solid #000;
+}
+.resume {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.header-container {
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row; 
     flex-grow: 1;
 }
 
@@ -19,12 +35,6 @@
 
 .footer-container {
     flex-grow: 2;
-}
-
-.logo-container,
-.txt-container {
-    border: 3px #EEEEEE solid;
-    width: 100%;
 }
 
 .txt-container {
@@ -37,9 +47,15 @@
 .txt-area {
     flex-grow: 8;
     margin: 20px;
-    background: transparent;
+    background: antiquewhite;
     width: 95%;
     font-size: 30px;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 100px;
+    overflow-y: hidden;
+    resize: none;
 }
 
 .suggestion {
@@ -52,7 +68,7 @@
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    gap: 20px
+    gap: 20px;
 }
 
 .btn-decode,
@@ -64,6 +80,8 @@
     border: none;
     font-size: 28px;
     margin: 0 0 30px 0;
+    border: #AAAAAA solid;
+
 }
 
 .btn-decode:hover,
@@ -72,4 +90,42 @@
     cursor: pointer;
     background: #CCCCCC;
     font-size: 32px;
+    border: #000 solid;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+@media only screen and (max-width: 780px) {
+    .header-container {
+        height: auto;
+        font-size: 14px;
+        flex-direction: column;
+    }
+
+    img {
+        height: auto; 
+        object-fit: contain;
+    }
+    .resume{
+        font-size: smaller;
+    }
+    .txt-area{
+        font-size: small;
+    }
+    .btn-container {
+        flex-direction: column;
+        gap: 3px;
+    }
+    .suggestion{
+        font-size: small;
+    }
+    .btn-code,
+    .btn-decode,
+    .btn-cpy {
+        height: 45px;
+        font-size: 28px;
+    }
 }
